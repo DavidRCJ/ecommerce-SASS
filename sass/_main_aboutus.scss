@@ -1,0 +1,160 @@
+.T1 {
+    .titulo_principal {
+        div {
+            h1 {
+                @extend %titulo1;
+            }
+        }
+
+        div {
+            img {
+                @extend %imagelogo;
+            }
+        }
+    }
+}
+
+.t2 {
+    div {
+        h2 {
+            @extend %titulo2;
+        }
+
+        p {
+            @extend %parrafo;
+        }
+    }
+}
+
+.consejo {
+    div {
+        h2 {
+            @extend %titulo2;
+        }
+
+        h3 {
+            @extend %titulo3;
+        }
+
+        p {
+            @extend %parrafo;
+        }
+    }
+}
+
+.opinion {
+    h2 {
+        @extend %titulo2;
+    }
+
+    div {
+        #area {
+            width: auto;
+            font-family: "Dancing Script", cursive;
+            font-size: 30px;
+        }
+
+        display: block;
+    }
+}
+
+.raza {
+    h2 {
+        @extend %titulo2;
+    }
+}
+
+.maps {
+    div {
+        h2 {
+            @extend %titulo2;
+        }
+    }
+
+    div {
+        #map {
+            margin: 10px;
+            width: 1720px;
+            height: 300px;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .T1 {
+        .titulo_principal {
+            h1 {
+                font-size: 30px;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    .t2 {
+        div {
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .consejo {
+        div {
+            h2 {
+                font-size: 25px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            div {
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+    }
+
+    .opinion {
+        h2 {
+            font-size: 25px;
+        }
+
+        #area {
+            font-size: 20px;
+        }
+    }
+
+    .raza {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .maps {
+        div {
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        div {
+            #map {
+                margin: 5px;
+                width: 320px;
+                height: 200px;
+            }
+        }
+    }
+
+}
