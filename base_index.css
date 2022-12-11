@@ -9,6 +9,12 @@ body header nav .container-fluid a {
   font-size: 30px;
   font-family: "Dancing Script", cursive;
 }
+body header nav img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: center;
+}
 
 .t1 div h1, .T1 .titulo_principal div h1, .T1 .titulo_principal h1 {
   text-shadow: 3px 3px 3px #ffffff;
