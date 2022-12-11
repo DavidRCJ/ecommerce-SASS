@@ -1,0 +1,9 @@
+@mixin botonbase($ancho,$color){
+    background-color:$color;
+    width: $ancho;
+    height: 200px;
+    font-size: 20px;
+    color: white;
+    padding: 2rem;
+    border-radius: 1%;    
+}

@@ -5,6 +5,11 @@
   background-color: #ff92bc;
 }
 
+body header nav .container-fluid a {
+  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+}
+
 .t1 div h1, .T1 .titulo_principal div h1, .T1 .titulo_principal h1 {
   text-shadow: 3px 3px 3px #ffffff;
   text-align: center;
@@ -41,11 +46,6 @@
   text-align: center;
   color: #3a3337;
   padding: 1rem 0rem 1rem 0rem;
-}
-
-body header nav .container-fluid a {
-  font-size: 30px;
-  font-family: "Dancing Script", cursive;
 }
 
 .T1 {
@@ -235,8 +235,26 @@ body header nav .container-fluid a {
   text-align: center;
 }
 
-.sobreti .text_are div .control {
-  background-color: #3a3337;
+.sobreti div {
+  margin: 2rem 0rem 1rem 0rem;
+}
+.sobreti .botones .boton_clean {
+  background-color: gray;
+  width: 400px;
+  height: 200px;
+  font-size: 20px;
+  color: white;
+  padding: 2rem;
+  border-radius: 1%;
+}
+.sobreti .botones .boton_send {
+  background-color: blue;
+  width: 450;
+  height: 200px;
+  font-size: 20px;
+  color: white;
+  padding: 2rem;
+  border-radius: 1%;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {

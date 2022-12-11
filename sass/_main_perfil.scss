@@ -83,13 +83,16 @@
       @extend %titulo2;
     }
   }
-
-  .text_are {
-    div{
-      .control{
-        background-color: #3a3337;
-      }
-      
+  
+   div{
+      margin: 2rem 0rem 1rem 0rem;            
+    }
+  .botones{
+    .boton_clean{
+      @include botonbase(400px,gray);
+    }
+    .boton_send{
+      @include botonbase(450,blue);
     }
   }
 }
@@ -130,7 +133,7 @@
         font-size:25px;
       }
     }
-  
+      
     .text_are {
       width: 50px;
       height: 150px;

@@ -4,8 +4,9 @@
     font-family: "Dancing Script", cursive;
     background-color: #ff92bc;
 }
-@import "_variables_extend";
 @import "_header";
+@import "_mixin";
+@import "_variables_extend";
 @import "_main_index";
 @import "_main_aboutus";
 @import "_main_perfil";
