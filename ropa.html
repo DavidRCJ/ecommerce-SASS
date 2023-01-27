@@ -12,15 +12,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./base_index.css" />
-  <audio autoplay> <source src="./audio/audio2.mp3" type="audio/mp3">Tu navegador no es compatible con el audio HTML5 </audio>
+  <link rel="stylesheet" href="./sass/base_index.css">
+  <audio autoplay>
+    <source src="./audio/audio2.mp3" type="audio/mp3">Tu navegador no es compatible con el audio HTML5
+  </audio>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Menu</a>
+        <a class="btn" href="./index.html"><img src="./Imagenes/logo.png" class="rounded mx-auto d-block" alt="Inicio"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,7 +42,8 @@
               <a class="nav-link" href="http://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
             </li>
             <li class="nav-item">
-              <img src="./Imagenes/carro.png" alt="carrito">
+              <a class="btn" href="http://www.google.com"><img src="./Imagenes/carro.png"
+                  class="rounded mx-auto d-block" alt="Carro"></a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -51,8 +54,9 @@
       </div>
     </nav>
   </header>
+
   <main>
-    
+
     <section class="t1">
       <div class="titulo_principal">
         <h1>Ropa</h1>
