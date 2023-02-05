@@ -13,22 +13,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./sass/base_index.css">
+  <link rel="stylesheet" href="./sass/style.css">
   <audio autoplay>
-    <source src="./audio/audio3.mp3" type="audio/mp3" /> Tu navegador no es compatible con el audio HTML5
+    <source src="./audio/audio2.mp3" type="audio/mp3">Tu navegador no es compatible con el audio HTML5
   </audio>
 </head>
 
-<body>
+<body class="higienePage">
 
   <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="btn" href="./index.html"><img src="./Imagenes/logo.png" class="rounded mx-auto d-block"
             alt="Inicio"></a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -44,8 +47,12 @@
               <a class="nav-link" href="http://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
             </li>
             <li class="nav-item">
-              <a class="btn" href="http://www.google.com"><img src="./Imagenes/carro.png"
-                  class="rounded mx-auto d-block" alt="Carro"></a>
+              <button id="muestraProductosCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src=" ./Imagenes/carro.png"
+                  class="rounded mx-auto d-block" alt="Carro"></button>
+            </li>
+            <li class="nav-item">
+              <a id="contenedorCarrito"></a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -67,29 +74,32 @@
       </div>
     </section>
 
-    <section class="grid_contener">
-      <div item="item1">
-        <h3>Jabon</h3>
-        <img src="./Imagenes/higiene/jabon.png" alt="Jabon" />
-      </div>
-      <div item="item2">
-        <h3>Crema</h3>
-        <img src="./Imagenes/higiene/crema.png" alt="Crema" />
-      </div>
-      <div item="item3">
-        <h3>Shampoo</h3>
-        <img src="./Imagenes/higiene/shampoo.png" alt="Shampoo" />
-      </div>
-      <div item="item4">
-        <h3>Losion</h3>
-        <img src="./Imagenes/higiene/losion.png" alt="Losion" />
-      </div>
-      <div item="item5">
-        <h3>Acondicionador</h3>
-        <img src="./Imagenes/higiene/acondicionador.png" alt="Acondicionador" />
+    <section id="contenedor_Productos">
+    </section>
+
+    <section class="panel_carrito">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasRightLabel">Esto es lo que hay en tu carrito</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div id="contenedorCarritoCanvas" class="offcanvas-body">
+        </div>
+
+        <div>
+          <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+        </div>
+
+        <div>
+          <button id="vaciar_carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+       
       </div>
     </section>
+
   </main>
+
 
   <footer class="footer_index">
     <section>
@@ -108,6 +118,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+  <script src="./higiene.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+
+  
 </body>
 
-</html>
+</html>0

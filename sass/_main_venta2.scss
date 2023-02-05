@@ -1,0 +1,38 @@
+.ropaPage {
+  main {
+    .t1 {
+      div {
+        h1 {
+          @extend %titulo1;
+        }
+      }
+      div {
+        img {
+          @extend %imagelogo;
+        }
+      }
+    }
+
+    #contenedor_Productos_2{
+          
+    }
+   @media only screen and (min-width: 320px) and (max-width: 500px) {
+      .grid_contener {
+        grid-template-areas:
+          "item1"
+          "item2"
+          "item3"
+          "item4"
+          "item5";
+        h3 {
+          font-size: 25px;
+        }
+        img {
+          margin: 1rem 0rem 1rem 0rem;
+          padding-left: auto;
+        }
+      }
+    }
+  }
+}
+

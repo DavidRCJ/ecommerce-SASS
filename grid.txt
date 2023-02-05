@@ -1,0 +1,110 @@
+<section class="grid_contener">
+      <div item="item1">
+        <h3>Jabon</h3>
+        <img src="./Imagenes/higiene/jabon.png" alt="Jabon" />
+      </div>
+      <div item="item2">
+        <h3>Crema</h3>
+        <img src="./Imagenes/higiene/crema.png" alt="Crema" />
+      </div>
+      <div item="item3">
+        <h3>Shampoo</h3>
+        <img src="./Imagenes/higiene/shampoo.png" alt="Shampoo" />
+      </div>
+      <div item="item4">
+        <h3>Losion</h3>
+        <img src="./Imagenes/higiene/losion.png" alt="Losion" />
+      </div>
+      <div item="item5">
+        <h3>Acondicionador</h3>
+        <img src="./Imagenes/higiene/acondicionador.png" alt="Acondicionador" />
+      </div>
+    </section>
+
+    .grid_contener {
+      margin: 1em 1em 1em 1em;
+      border: 10px;
+      display: grid;
+      gap: 5px;
+      grid-template-areas: "item1 item2 item3 item4 item5";
+
+      .item1 {
+        grid-area: item1;
+      }
+      .item2 {
+        grid-area: item2;
+      }
+      .item3 {
+        grid-area: item3;
+      }
+      .item4 {
+        grid-area: item4;
+      }
+      .item5 {
+        grid-area: item5;
+      }
+      h3 {
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 2px 2px 2px #353535;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        background-color: #ff0051;
+      }
+      img {
+        margin: 1rem 0rem 1rem 0rem;
+        padding-left: 1rem;
+        width: 280px;
+        height: 280px;
+        align-items: flex-end;
+      }
+    }
+
+
+
+ <section class="grid_contener">
+      <div item="item1">
+        <h3>Camisas</h3>
+        <img src="./Imagenes/ropa/camisa.png" alt="Camisa">
+      </div>
+      <div item="item2">
+        <h3>Playeras</h3>
+        <img src="./Imagenes/ropa/playera.png" alt="Playera">
+      </div item="item3">
+      <div item="item4">
+        <h3>Abrigos</h3>
+        <img src="./Imagenes/ropa/abrigo.png" alt="Abrigo">
+      </div>
+      <div item="item5">
+        <h3>Mascadas</h3>
+        <img src="./Imagenes/ropa/panoleta.png" alt="Mascada">
+      </div>
+      <div>
+        <h3>Cosplay</h3>
+        <img src="./Imagenes/ropa/cosplay.png" alt="Cosplay">
+      </div>
+    </section>
+
+
+    <section class="grid_contener">
+      <div item="item1">
+        <h3>Cadenas</h3>
+        <img src="./Imagenes/accesorios/cadena.png" alt="Cadena">
+      </div>
+      <div item="item2">
+        <h3>Lentes</h3>
+        <img src="./Imagenes/accesorios/lentes.png" alt="Lentes">
+      </div>
+      <div item="item3">
+        <h3>Boinas</h3>
+        <img src="./Imagenes/accesorios/boina.png" alt="Boina">
+      </div>
+      <div item="item4">
+        <h3>Gorras</h3>
+        <img src="./Imagenes/accesorios/gorra.png" alt="Gorra">
+      </div>
+      <div item="item5">
+        <h3>Rascaderos</h3>
+        <img src="./Imagenes/accesorios/rascadera.png" alt="Rascadera">
+      </div>
+    </section>

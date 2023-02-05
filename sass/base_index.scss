@@ -1,8 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Dancing Script", cursive;
-    background-color: #ff92bc;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+  background-color: #ff92bc;
 }
 @import "_header";
 @import "_mixin";
@@ -11,5 +11,6 @@
 @import "_main_aboutus";
 @import "_main_perfil";
 @import "_main_venta";
+@import "_main_venta2";
+@import "_main_venta3";
 @import "_footer";
-

@@ -1,0 +1,104 @@
+.accesoriosPage{
+    main {
+      .t1 {
+        div {
+          h1 {
+            @extend %titulo1;
+          }
+        }
+        div {
+          img {
+            @extend %imagelogo;
+          }
+        }
+      }
+  
+      #contenedor_Productos{
+            
+      }
+
+      .panel_carrito {
+        h3{
+         width: 400px;
+         height: 60px;
+         font-size: 28px;
+         color: aliceblue;
+         background-color: rgb(194, 18, 91);   
+         
+        }
+       .imag_js {
+         width: 200px;
+         height: 220px;
+         border-radius: 15%;
+       }
+ 
+       .titulo_h2 {
+         font-size: 30px;
+         display: flex;
+         justify-content: center;
+         text-shadow: 3px 3px 3px #000000;
+         color: rgb(255, 255, 255);
+         background-color: rgb(255, 0, 132);
+         border-radius: 15%;
+       }
+       .precio_js{
+         font-size: 20px;
+         display: flex;
+         justify-content: center;
+         text-shadow: 3px 3px 3px #000000;
+         color: rgb(255, 255, 255);
+         background-color: rgb(255, 0, 132);
+         border-radius: 15%;
+       }
+       #eliminar_Producto{
+         width: 50px;;
+         height: 50px;
+         border-radius: 10%;
+         img{
+           width: 50px;;
+         height: 50px;
+         border-radius: 15%;
+         }
+       }
+ 
+       .precioProducto{
+         color: aliceblue;
+         text-shadow: 2px 2px 2px rgb(255, 0, 119);
+         font-size: 30px;
+         
+       }
+       #vaciar_carrito{
+         width: 400px;
+         height: 50px;
+         border-radius: 5%;
+         font-size: 30px;
+         color: white;
+         text-shadow: #00ff48;
+         background-color: #00425e;
+         
+       }
+     
+   }  
+    
+
+     @media only screen and (min-width: 320px) and (max-width: 500px) {
+        #contenedor_Productos {
+          grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5";
+          h3 {
+            font-size: 25px;
+          }
+          img {
+            margin: 1rem 0rem 1rem 0rem;
+            padding-left: auto;
+          }
+        }
+      }
+    }
+  }
+  
+  

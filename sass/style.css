@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+
+  
+#contenedorCarrito{
+    color: rgb(0, 0, 0);
+    font-size: 40px;    
+}
+#contenedor_Productos {    
+    margin: 1em 1em 1em 1em;
+    border: 10px;
+    display: grid;
+    gap: 8px;
+    grid-template-areas: "item1 item2 item3 item4 item5";
+
+}
+
+#contenedor_Productos .imag_js {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+
+#contenedor_Productos .titulo_h2 {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 3px 3px 3px #000000;
+    color: rgb(255, 255, 255);
+}
+#contenedor_Productos .precio_js{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 2px #000000;
+    color: rgb(255, 255, 255);
+}
+#contenedor_Productos .buton_js{ 
+    margin: 1rem;   
+    background-color: #ff0062; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+}
