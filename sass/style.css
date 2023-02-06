@@ -51,6 +51,13 @@
     font-size: 19px;
 }
 
+    .sumar{
+        cursor: pointer;
+    }
+    .restar{
+        cursor: pointer;
+    }
+
 @media only screen and (min-width: 320px) and (max-width: 500px) {
     
    
