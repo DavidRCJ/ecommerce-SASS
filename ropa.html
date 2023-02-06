@@ -44,12 +44,12 @@
               <a class="nav-link" href="http://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"><img src=" ./Imagenes/carro.png" class="rounded mx-auto d-block"
-                  alt="Carro"></button>
+              <button id="muestraProductosCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src=" ./Imagenes/carro.png"
+                  class="rounded mx-auto d-block" alt="Carro"></button>
             </li>
             <li class="nav-item">
-              <a id="pruebaNav"></a>
+              <a id="contenedorCarrito"></a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -74,17 +74,27 @@
 
     <section id="contenedor_Productos"> </section>
 
-    <section>
+    <section class="panel_carrito">
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Esto es lo que hay entu carrito</h5>
+          <h3 class="offcanvas-title" id="offcanvasRightLabel">Esto es lo que hay en tu carrito</h3>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          ...
+
+        <div id="contenedorCarritoCanvas" class="offcanvas-body">
         </div>
+
+        <div>
+          <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+        </div>
+
+        <div>
+          <button id="vaciar_carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+       
       </div>
     </section>
+    
 
   </main>
 
@@ -106,6 +116,7 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <script src="./ropa.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
