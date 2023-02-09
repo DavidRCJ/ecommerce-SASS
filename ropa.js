@@ -1,10 +1,10 @@
 
 const ropa = [
-    {id:6 , img: "./Imagenes/ropa/camisa.png", tipo: 'Camisa', modelo: 'Playero', stock: 8, precio: 250.50 },
-    {id:7 , img: "./Imagenes/ropa/playera.png",tipo: 'Playera', modelo: 'Urban', stock: 10, precio: 120.15 },
-    {id:8 , img: "./Imagenes/ropa/abrigo.png" ,tipo: 'Abrigos', modelo: 'Invierno', stock: 9, precio: 300.51 },
-    {id:9 , img: "./Imagenes/ropa/panoleta.png" ,tipo: 'Mascadas', modelo: 'Frances', stock: 5, precio: 50.50 },
-    {id:10, img: "./Imagenes/ropa/cosplay.png", tipo: 'Cosplay', modelo: 'Harry Potter', stock: 3, precio: 500.99 }
+    {id:6 , img: "./Imagenes/ropa/camisa.png", tipo: 'Camisa', modelo: 'Playero', cantidad: 1, precio: 250.50 },
+    {id:7 , img: "./Imagenes/ropa/playera.png",tipo: 'Playera', modelo: 'Urban', cantidad: 1, precio: 120.15 },
+    {id:8 , img: "./Imagenes/ropa/abrigo.png" ,tipo: 'Abrigos', modelo: 'Invierno', cantidad: 1, precio: 300.51 },
+    {id:9 , img: "./Imagenes/ropa/panoleta.png" ,tipo: 'Mascadas', modelo: 'Frances', cantidad: 1, precio: 50.50 },
+    {id:10, img: "./Imagenes/ropa/cosplay.png", tipo: 'Cosplay', modelo: 'Harry Potter', cantidad: 1, precio: 500.99 }
 ];
 
 
@@ -16,6 +16,9 @@ const contadorCarrito = document.createElement("p");
 const contenedorCarritoCanvas = document.getElementById("contenedorCarritoCanvas");
 
 const botonVaciar = document.getElementById("vaciar_carrito");
+const botonMenorMayor = document.getElementById("o_menor_mayor");
+const botonMayorMenor = document.getElementById("o_mayor_menor");
+const botonPagar = document.getElementById("pagar");
 const precioTotal = document.getElementById("precioTotal");
 
 const carritoCompras = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -45,20 +48,33 @@ ropa.forEach(servicio => {
 
 /********************************* METODO QUE AGREGA LOS PRODCUTOS AL CARRITO***************************************************************** */
 const agregarAlCarrito = (producto, carritoCompras) => {
-    const servico_select = ropa.find(item => item.id === producto)
-   
-    carritoCompras.push(servico_select);
-    Swal.fire({
-        type: "success",
-        tittle: "SE AGREGO CON EXITO EL PRODUCTO AL CARRITO",
-        text: "SE AGREGO CON EXITO EL PRODUCTO AL CARRITO"
-    });
-
-    saveLocal();
-    mostrarCarrito();    
     
-}
+    const existe = carritoCompras.some (item=> item.id === producto)
 
+    if (existe){
+        const prod = carritoCompras.map (prod => { 
+            if (prod.id === producto){
+               swal("El producto ya esta en el carrito", "se modifico cantidad");
+               prod.cantidad++;
+            }
+        })
+    }
+    else {
+        const servico_select = ropa.find(item => item.id === producto)
+        carritoCompras.push(servico_select);
+        Swal.fire({
+            tittle: "Se agrego con exito al carrito",
+            imageUrl: 'https://i.gifer.com/7efs.gif',
+            imageWidth: 150,
+            imageHeight: 150,
+            text: "tu producto se agrego con exito",
+            
+        });
+        
+    }
+    saveLocal();
+    mostrarCarrito();
+}
 /************************** CONTADOR DEL CARRITO*****************************************************************/
 const carritoCounter = () => {
     const almacenaContador = carritoCompras.length;
@@ -66,15 +82,44 @@ const carritoCounter = () => {
     contenedorIconoCarrito.innerText = JSON.parse(localStorage.getItem("almacenaContador"));
     //carritoCompras.length ;   
 }
-
 carritoCounter();
 
+
+/*****************************************ORDENA PRODUCTOS MAYOR A MENOR Y MENOR A MAYOR*****************************************************/
+botonMenorMayor.addEventListener('click', () => {
+    const ordenAlfabetico = carritoCompras.sort((item1, item2) => {
+        if (item1.precio == item2.precio) {
+            return 0;
+        }
+        else if (item1.precio < item2.precio) {
+            return -1;
+        } else {
+            return 1;
+        }
+    })
+    mostrarCarrito();
+});
+
+botonMayorMenor.addEventListener('click', () => {
+    const ordenAlfabetico1 = carritoCompras.sort((item1, item2) => {
+        if (item1.precio == item2.precio) {
+            return 0;
+        }
+        else if (item1.precio < item2.precio) {
+            return 1;
+        } else {
+            return -1;
+        }
+    })
+    mostrarCarrito();
+});
 
 /*****************************    MUESTRA LO QUE QUE HAY EN EL CARRITO     ****************************************** */
 const mostrarCarrito = () => {
 
     contenedorCarritoCanvas.innerHTML = "";
     carritoCompras.forEach(servicio => {
+
         const div = document.createElement("div");
         div.innerHTML =
             `
@@ -82,48 +127,31 @@ const mostrarCarrito = () => {
             <img class="imag_js" src="${servicio.img}" class="card-img-top" alt="${servicio.marca}">
             <div class="card-body">
                 <h2  class="titulo_h2" class="card-title">${servicio.tipo}</h5>
-                <p class="precio_js" class="card-text">Precio (MX): ${servicio.precio}</p> 
+                <p class="precio_js" class="card-text">Precio C/U : ${servicio.precio} (MX)</p> 
                 <p class="precio_js" class="card-text">Cantidad: ${servicio.cantidad}</p>                                  
                 <div class="container-sm">
                     <div class="row">
                         <div class="col">
-                            <button onclick="sumarDelCarrito (${servicio.id})" class="sumar" id="eliminar_Producto"><img src=" ./Imagenes/sumar.png" class="rounded mx-auto d-block"
-                            alt="sumar"></button>             
+                            
                         </div>
                     <div class="col">                  
-                            <button onclick="restarDelCarrito (${servicio.id})" class="restar" id="eliminar_Producto"><img src=" ./Imagenes/restar.png" class="rounded mx-auto d-block"
-                                alt="restar"></button>             
+                        <button onclick="eliminarDelCarrito (${servicio.id})" id="eliminar_Producto"><img src=" ./Imagenes/eliminar.png" class="rounded mx-auto d-block"
+                        alt="Eliminar"></button>             
                     </div>  
                     <div class="col">                  
-                            <button onclick="eliminarDelCarrito (${servicio.id})" id="eliminar_Producto"><img src=" ./Imagenes/eliminar.png" class="rounded mx-auto d-block"
-                            alt="Eliminar"></button>             
+                        
                     </div>  
                 </div>
             </div>                                              
         </div>        
             `
         contenedorCarritoCanvas.appendChild(div);
-
-
-       /* let restar = carritoCompras.querySelector(".restar");
-        restar.addEventListener("click" = () => {
-            console.log("1")
-        });*/
     })
-
     carritoCounter();
-    precioTotal.innerText = carritoCompras.reduce((acc, servicio) => acc + servicio.precio, 0)
+     precioTotal.innerText = carritoCompras.reduce((acc, servicio) => acc + servicio.cantidad*servicio.precio, 0)
 }
 
-/******************************************SUMA O AGREGA MAS PRODCUTO DEL MISMO */
-const sumarDelCarrito = (servicio) => {}
-
-const restarDelCarrito = (servicio) => {
-    
-    
-}
-
-/*********************************ELIMINA DEL CARRITO *************************************************************************/
+/****************************************ELIMINA DEL CARRITO ******************************************************************/
 const eliminarDelCarrito = (servicio) => {
     const item = carritoCompras.find((producto) => servicio.id === producto);
     const indice = carritoCompras.indexOf(item);
@@ -131,18 +159,30 @@ const eliminarDelCarrito = (servicio) => {
     mostrarCarrito();
     saveLocal();
 }
-
-
 /*****************************************VACIA EL CARRITO ********************************************************************/
 botonVaciar.addEventListener('click', () => {
     carritoCompras.length = 0;
+    localStorage.clear()
     mostrarCarrito();
 })
-/********************************************************* */
+/***************************************GUARDA EN LOCAL STORAGE **************************************************************/
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carritoCompras));
     mostrarCarrito();
 }
 
-
+/*********************************************PAGAR PRODUCTOS******************************************************************/
+botonPagar.addEventListener('click', () => {
+    carritoCompras.length = 0;
+    localStorage.clear();
+    Swal.fire({
+        imageUrl: 'https://i.gifer.com/7efs.gif',
+        imageWidth: 150,
+        imageHeight: 150,
+        tittle: "Tu compra es exitosa",
+        text: "Tu compra se realizo con exito",
+    });
+    // swal("Tu Compras es Exitosa", "Tu Compra es Exitosa", "success");
+    mostrarCarrito();
+})
 mostrarCarrito();

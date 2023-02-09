@@ -75,21 +75,25 @@
     <section class="panel_carrito">
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-          <h3 class="offcanvas-title" id="offcanvasRightLabel">Esto es lo que hay en tu carrito</h3>
+          <div>
+            <button id="o_menor_mayor" class="boton-agregar">Ordenar menor a mayor precio</button>
+          </div>
+          <div>
+            <button id="o_mayor_menor" class="boton-agregar">Ordenar mayor a menor precio</button>
+          </div>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-
         <div id="contenedorCarritoCanvas" class="offcanvas-body">
         </div>
 
         <div>
           <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+          <button id="pagar" class="boton-agregar">Pagar</button>
         </div>
-
         <div>
           <button id="vaciar_carrito" class="boton-agregar">Vaciar carrito</button>
         </div>
-       
+
       </div>
     </section>
     
@@ -115,6 +119,7 @@
     crossorigin="anonymous"></script>
   <script src="./accesorios.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

@@ -17,13 +17,13 @@
     #contenedor_Productos {}
 
     .panel_carrito {
-      h3 {
-        width: 400px;
-        height: 60px;
-        font-size: 28px;
-        color: aliceblue;
-        background-color: rgb(194, 18, 91);
 
+      #o_menor_mayor {
+        @extend %b_menor_mayor;
+      }
+
+      #o_mayor_menor {
+        @extend %b_mayor_menor;
       }
 
       .imag_js {
@@ -65,23 +65,32 @@
       }
 
       .precioProducto {
-        color: aliceblue;
-        text-shadow: 2px 2px 2px rgb(255, 0, 119);
+        background-color: #00425e;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 2px rgb(195, 0, 91);
         font-size: 30px;
 
       }
 
       #vaciar_carrito {
         width: 400px;
-        height: 50px;
+        height: 40px;
         border-radius: 5%;
         font-size: 30px;
         color: white;
         text-shadow: #00ff48;
         background-color: #00425e;
-
       }
 
+      #pagar {
+        width: 400px;
+        height: 50px;
+        border-radius: 5%;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        text-shadow: #00ff48;
+        background-color: #eeff00;
+      }
     }
 
     @media only screen and (min-width: 320px) and (max-width: 500px) {
@@ -108,9 +117,7 @@
 
       #contenedor_Productos {
         margin: 1em 5em 1em 5em;
-        border: 10px;
         display: grid;
-        gap: 2px;
         grid-template-areas:
           "item1"
           "item2"
@@ -121,15 +128,15 @@
         div {
           width: auto;
           height: auto;
-          padding-left: auto;
-
+          display: block;
+          margin: auto;
           img {
             width: 200px;
             height: 200px;
           }
 
           div {
-                        
+
             h2 {
               font-size: 30px;
             }

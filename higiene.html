@@ -53,14 +53,14 @@
             </li>
             <li class="nav-item">
               <a id="contenedorCarrito"></a>
-            </li>          
-            </div>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+            </li>
         </div>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
       </div>
     </nav>
   </header>
@@ -76,29 +76,31 @@
     </section>
 
     <section id="contenedor_Productos">
+
     </section>
 
     <section class="panel_carrito">
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-          <h3 class="offcanvas-title" id="offcanvasRightLabel">Esto es lo que hay en tu carrito</h3>
+          <div>
+            <button id="o_menor_mayor" class="boton-agregar">Ordenar menor a mayor precio</button>
+          </div>
+          <div>
+            <button id="o_mayor_menor" class="boton-agregar">Ordenar mayor a menor precio</button>
+          </div>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-
         <div id="contenedorCarritoCanvas" class="offcanvas-body">
         </div>
-
         <div>
           <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+          <button id="pagar" class="boton-agregar">Pagar</button>
         </div>
-
         <div>
           <button id="vaciar_carrito" class="boton-agregar">Vaciar carrito</button>
         </div>
-       
       </div>
-    </section> 
-
+    </section>
   </main>
 
 
@@ -109,9 +111,11 @@
         <iconify-icon icon="ic:baseline-facebook"></iconify-icon>
         <p>Todos los derechos de fashion Cat SA de CV resevardos.</p>
         <img src="./Imagenes/metospagos.png" alt="metodosdepago">
+
       </div>
     </section>
   </footer>
+
 
   <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
@@ -121,9 +125,10 @@
     crossorigin="anonymous"></script>
   <script src="./higiene.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-  
+
+
 </body>
 
-</html>0
+</html>
