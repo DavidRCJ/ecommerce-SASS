@@ -1,15 +1,24 @@
 .ropaPage {
+  
   main {
+    .portada_image{
+      div{
+        background-color: #ca006f;
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+        img{
+          margin: 1rem 1rem 1rem 1rem;
+          width:90%;   
+          height: 350px;
+          border-radius: 10%;
+          box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+
+        }
+      }
+    }
     .t1 {
       div {
         h1 {
           @extend %titulo1;
-        }
-      }
-
-      div {
-        img {
-          @extend %imagelogo;
         }
       }
     }

@@ -13,9 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/base_index.css">
-    <audio autoplay>
-        <source src="./audio/audio1.mp3" type="audio/mp3"> Tu navegador no es compatible con el audio HTML5
-    </audio>
+
 </head>
 
 <body>
@@ -97,11 +95,11 @@
                             <Label>Direccion </Label>
                             <input type="text" name="Direccion" placeholder="Direccion" id="direc" required>
                         </div>
-                        
+
                         <div>
-                            <input type="submit" id="btn" name="btn" value="Enviar" onclick="processData()" >
+                            <input type="submit" id="btn" name="btn" value="Enviar" onclick="processData()">
                         </div>
-                        
+
                     </div>
                 </form>
 
@@ -145,10 +143,41 @@
     </main>
 
     <footer class="footer_index">
+
         <section>
+            <div class="contenedorIcon">
+                <div>
+                    <h5>Whats App</h5>
+
+                    <a class="btn"
+                        href="https://api.whatsapp.com/send?phone=2383048902&text=Hola%20vi%20tu%20perfil,%20en%20tu%20pagina%20y%20me%20parece%20interesante,%20me%20gustaria%20comentar%20sobre"
+                        alt="Icon Whats App">
+                        <img src="./Imagenes/social_redes/whats.png" class="rounded mx-auto d-block"
+                            alt="Whats App ICon"></a>
+
+                </div>
+                <div>
+                    <h5>G-Mail</h5>
+                    <a class="btn"
+                        href="mailto:davidrcruzjuarez@gmail.com?subject=Interes%20en%20tu%20perfil&body=Hola%20soy%3A%0D%0AMe%20interesa%20tu%20perfil%2C%20tu%20portafolio%20es%20bueno."
+                        role="button"><img src="./Imagenes/social_redes/gmail.png" class="rounded mx-auto d-block"
+                            alt="Icon G-Mail"></a>
+                </div>
+                <div>
+                    <h5>Git Hub</h5>
+                    <a class="btn" href="https://github.com/DavidRCJ"><img src="./Imagenes/social_redes/github.png"
+                            class="rounded mx-auto d-block" alt="Icon Git Hub"></a>
+                </div>
+                <div>
+                    <h5>Facebook</h5>
+                    <a class="btn" href="https://www.facebook.com/lmlDRCJlml?mibextid=ZbWKwL">
+                        <img src="./Imagenes/social_redes/face.png" class="rounded mx-auto d-block"
+                            alt="Icon Facebook"></a>
+                </div>
+            </div>
+
+            </div>
             <div>
-                <iconify-icon icon="ri:instagram-line" id="ing"></iconify-icon>
-                <iconify-icon icon="ic:baseline-facebook"></iconify-icon>
                 <p>Todos los derechos de fashion Cat SA de CV resevardos.</p>
                 <img src="./Imagenes/metospagos.png" alt="metodosdepago">
             </div>

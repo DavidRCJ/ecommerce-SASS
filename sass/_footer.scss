@@ -2,6 +2,24 @@ footer {
   background-color: #ffc2e9;
 
   section {
+    .contenedorIcon {
+      display: flex;
+      justify-content: center;
+
+      div {
+        border-color: transparent;
+        h5 {
+          font-size: 12px;
+      }
+        a {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+     } 
+    }
+
     div {
       border-width: thin;
       border-style: solid;
@@ -9,6 +27,11 @@ footer {
       font-size: 30px;
       text-align: center;
       contain: content;
+
+      img {
+        width: 800px;
+        height: 40px;
+      }
     }
   }
 }
@@ -24,8 +47,8 @@ footer {
         }
 
         img {
-          width: 350px;
-          height: 20px;
+          width: 300px;
+          height: 15px;
         }
       }
     }

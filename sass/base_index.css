@@ -23,7 +23,7 @@ body header nav img {
   font-size: 60px;
 }
 
-.accesoriosPage main .t1 div img, .ropaPage main .t1 div img, .higienePage main .t1 div img, .T1 .titulo_principal div img, .T1 div img {
+.T1 .titulo_principal div img, .T1 div img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -54,7 +54,7 @@ body header nav img {
   padding: 1rem 0rem 1rem 0rem;
 }
 
-.accesoriosPage main .panel_carrito #o_menor_mayor, .ropaPage main .panel_carrito #o_menor_mayor, .higienePage main .panel_carrito #o_menor_mayor {
+.accesoriosPage main .panel_carrito #o_menor_mayor, .ropaPage main .panel_carrito #o_menor_mayor, .higienePage main .panel_carrito #o_menor_mayor, .panel_carrito #o_menor_mayor {
   width: 180px;
   height: 60px;
   background-color: rgb(0, 4, 255);
@@ -62,7 +62,7 @@ body header nav img {
   font-size: 20px;
 }
 
-.accesoriosPage main .panel_carrito #o_mayor_menor, .ropaPage main .panel_carrito #o_mayor_menor, .higienePage main .panel_carrito #o_mayor_menor {
+.accesoriosPage main .panel_carrito #o_mayor_menor, .ropaPage main .panel_carrito #o_mayor_menor, .higienePage main .panel_carrito #o_mayor_menor, .panel_carrito #o_mayor_menor {
   width: 180px;
   height: 60px;
   background-color: rgb(255, 0, 0);
@@ -131,13 +131,6 @@ body header nav img {
   justify-items: center;
 }
 
-.panel_carrito h3 {
-  width: 400px;
-  height: 60px;
-  font-size: 28px;
-  color: aliceblue;
-  background-color: rgb(194, 18, 91);
-}
 .panel_carrito .imag_js {
   width: 200px;
   height: 220px;
@@ -185,6 +178,15 @@ body header nav img {
   text-shadow: #00ff48;
   background-color: #00425e;
 }
+.panel_carrito #pagar {
+  width: 400px;
+  height: 50px;
+  border-radius: 5%;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  text-shadow: #00ff48;
+  background-color: #eeff00;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {
   .T1 .titulo_principal div h1 {
@@ -219,6 +221,32 @@ body header nav img {
     padding-left: 3rem;
     width: 250px;
     height: 200px;
+  }
+  #contenedor_Productos {
+    margin: 1em 5em 1em 5em;
+    display: grid;
+    grid-template-areas: "item1" "item2" "item3" "item4" "item5";
+  }
+  #contenedor_Productos div {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  #contenedor_Productos div img {
+    width: 200px;
+    height: 200px;
+  }
+  #contenedor_Productos div div h2 {
+    font-size: 30px;
+  }
+  #contenedor_Productos div div p {
+    font-size: 25px;
+  }
+  #contenedor_Productos div div a {
+    font-size: 22px;
+    width: 200px;
+    height: 80px;
   }
 }
 .opinion div {
@@ -392,6 +420,19 @@ body header nav img {
     margin: 1em 0rem 1em 0rem;
   }
 }
+.higienePage main .portada_image div {
+  background-color: #00425e;
+}
+.higienePage main .portada_image div img {
+  margin: 2rem 1rem 2rem 1rem;
+  width: 100%;
+  height: 350px;
+  border-radius: 5%;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+.higienePage main .panel_carrito {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .higienePage main .panel_carrito .imag_js {
   width: 200px;
   height: 220px;
@@ -493,6 +534,17 @@ body header nav img {
   }
 }
 
+.ropaPage main .portada_image div {
+  background-color: #ca006f;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+.ropaPage main .portada_image div img {
+  margin: 1rem 1rem 1rem 1rem;
+  width: 90%;
+  height: 350px;
+  border-radius: 10%;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
 .ropaPage main .panel_carrito .imag_js {
   width: 200px;
   height: 220px;
@@ -593,6 +645,16 @@ body header nav img {
   }
 }
 
+.accesoriosPage main .portada_image div {
+  background-color: #00425e;
+}
+.accesoriosPage main .portada_image div img {
+  margin: 2rem 1rem 2rem 1rem;
+  width: 90%;
+  height: 380px;
+  border-radius: 5%;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
 .accesoriosPage main .panel_carrito .imag_js {
   width: 200px;
   height: 220px;
@@ -696,6 +758,20 @@ body header nav img {
 footer {
   background-color: #ffc2e9;
 }
+footer section .contenedorIcon {
+  display: flex;
+  justify-content: center;
+}
+footer section .contenedorIcon div {
+  border-color: transparent;
+}
+footer section .contenedorIcon div h5 {
+  font-size: 12px;
+}
+footer section .contenedorIcon div a img {
+  width: 30px;
+  height: 30px;
+}
 footer section div {
   border-width: thin;
   border-style: solid;
@@ -703,6 +779,10 @@ footer section div {
   font-size: 30px;
   text-align: center;
   contain: content;
+}
+footer section div img {
+  width: 800px;
+  height: 40px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {
@@ -713,8 +793,8 @@ footer section div {
     font-size: 15px;
   }
   footer section div img {
-    width: 350px;
-    height: 20px;
+    width: 300px;
+    height: 15px;
   }
 }
 
