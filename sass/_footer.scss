@@ -1,7 +1,8 @@
 footer {
-  background-color: #ffc2e9;
+  background-color: solid #ffc2e9;
 
   section {
+    margin: 1rem 0rem 1rem 0rem ;
     .contenedorIcon {
       display: flex;
       justify-content: center;
@@ -9,12 +10,12 @@ footer {
       div {
         border-color: transparent;
         h5 {
-          font-size: 12px;
+          font-size: 18px;
       }
         a {
           img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
           }
         }
      } 
